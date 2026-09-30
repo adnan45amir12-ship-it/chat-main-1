@@ -1,0 +1,73 @@
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true",
+    "users": {
+      ".indexOn": ["email", "online", "banned", "disabled", "karma"],
+      "$uid": {
+        ".read": "true",
+        ".write": "true"
+      }
+    },
+    "messages": {
+      "group": {
+        ".indexOn": ["timestamp", "senderUid"],
+        ".read": "true",
+        ".write": "true"
+      }
+    },
+    "personalAiMessages": {
+      "$uid": {
+        ".indexOn": ["timestamp"],
+        ".read": "true",
+        ".write": "true"
+      }
+    },
+    "privateChatMessages": {
+      "$chatKey": {
+        ".indexOn": ["timestamp"],
+        ".read": "true",
+        ".write": "true"
+      }
+    },
+    "presence": {
+      "$uid": {
+        ".read": "true",
+        ".write": "true"
+      }
+    },
+    "appeals": {
+      ".indexOn": ["status", "timestamp", "userUid"],
+      ".read": "true",
+      ".write": "true"
+    },
+    "reports": {
+      ".indexOn": ["status", "timestamp", "reportedUid"],
+      ".read": "true",
+      ".write": "true"
+    },
+    "customBots": {
+      ".read": "true",
+      ".write": "true"
+    },
+    "agentTasks": {
+      ".indexOn": ["status", "createdByUid", "createdAt"],
+      ".read": "true",
+      ".write": "true"
+    },
+    "polls": {
+      ".indexOn": ["status", "createdAt"],
+      ".read": "true",
+      ".write": "true"
+    },
+    "logs": {
+      ".indexOn": ["timestamp"],
+      ".read": "true",
+      ".write": "true"
+    },
+    "settings": {
+      ".read": "true",
+      ".write": "true"
+    }
+  }
+}

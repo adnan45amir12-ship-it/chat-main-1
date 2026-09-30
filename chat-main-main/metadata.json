@@ -1,0 +1,6 @@
+{
+  "name": "CommUnity - Realtime Hub & AI Chat",
+  "description": "Full-stack community chat platform with Firebase Authentication, Firebase Realtime Database, Google Drive link sharing, and Google Gemini AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

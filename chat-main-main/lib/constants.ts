@@ -1,0 +1,55 @@
+import { CustomBot } from './types';
+
+// Built-in default seed small bots if no custom bots configured
+export const DEFAULT_SMALL_BOTS: CustomBot[] = [
+  {
+    id: 'bot_task_agent',
+    name: 'Task Manager Bot',
+    avatarIcon: 'clipboard-list',
+    triggerWords: ['!task', '#task', '!addtask', '#todo', '!tasks', '#listtasks', '!done'],
+    description: 'Creates, tracks, and manages community tasks in the database.',
+    actionType: 'create_task',
+    systemPrompt: 'You are the Task Manager Agent Bot. Extract the task title, priority (low, medium, high, urgent), and optional assignee from the user message. Format a crisp task creation summary.',
+    enabled: true,
+  },
+  {
+    id: 'bot_poll_agent',
+    name: 'Community Poll Bot',
+    avatarIcon: 'bar-chart',
+    triggerWords: ['!poll', '#poll', '!vote', '#vote'],
+    description: 'Creates interactive community polls and records voter options.',
+    actionType: 'create_poll',
+    systemPrompt: 'You are the Community Poll Agent Bot. Extract the poll question and available choices/options from the user message. Format a clean poll announcement.',
+    enabled: true,
+  },
+  {
+    id: 'bot_karma_agent',
+    name: 'Karma & Kudos Bot',
+    avatarIcon: 'award',
+    triggerWords: ['!point', '!points', '!karma', '#kudos', '!rep', '#rep'],
+    description: 'Awards reputation points and badges to active community contributors.',
+    actionType: 'award_karma',
+    systemPrompt: 'You are the Karma & Reputation Bot. Identify the target member being praised and the reason for points. Generate an encouraging praise message.',
+    enabled: true,
+  },
+  {
+    id: 'bot_stats_agent',
+    name: 'Community Stats Bot',
+    avatarIcon: 'zap',
+    triggerWords: ['!stats', '#stats', '!info', '#analytics', '!health'],
+    description: 'Aggregates community metrics, active members, and task health.',
+    actionType: 'community_stats',
+    systemPrompt: 'You are the Community Analytics & Stats Agent. Provide an energetic summary of the community activity, database status, and engagement.',
+    enabled: true,
+  },
+  {
+    id: 'bot_log_agent',
+    name: 'System Log & Notice Bot',
+    avatarIcon: 'bell',
+    triggerWords: ['!log', '#log', '!announce', '#notice', '!alert'],
+    description: 'Logs system notices and broadcast records into the database log.',
+    actionType: 'record_log',
+    systemPrompt: 'You are the System Log & Notice Bot. Record the formal notice or log entry accurately.',
+    enabled: true,
+  },
+];
